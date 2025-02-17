@@ -1,0 +1,30 @@
+# Bitcoin Core Configuration
+BTC_RPC_USER=your_username
+BTC_RPC_PASS=your_secure_password
+BTC_RPC_HOST=localhost
+BTC_RPC_PORT=8332
+
+# Pool Configuration
+POOL_NAME=BitaXe Pool
+POOL_FEE=1
+REWARD_ADDRESS=your_btc_address
+DONATION_ADDRESS=bc1qy7qfcz9kt2lj3m72my89wp4j52cc9w79cys9hx
+
+# Server Ports
+STRATUM_PORT=3333
+WEB_PORT=6969
+
+# Performance Settings
+NODE_ENV=production
+MAX_CONNECTIONS=100
+UPDATE_INTERVAL=5000
+
+# Logging
+LOG_LEVEL=info
+LOG_TO_FILE=true
+LOG_DIR=./logs
+
+# Security
+ALLOW_REMOTE_ADMIN=false
+RATE_LIMIT=100
+RATE_LIMIT_WINDOW=900000  # 15 minutes in milliseconds
