@@ -7,6 +7,9 @@ I'm a redneck with ADHD, and I enjoy nerding out sometimes. I am in no way an ex
 
 When I have time, I will assemble a betting file structure and organize everything. 
 
+![screenshot of webpage](https://github.com/user-attachments/assets/599a792c-d5d7-47bb-b702-534635b1e214)
+
+
 ## Features
 
 - **Real-time BitaXe Monitoring**
