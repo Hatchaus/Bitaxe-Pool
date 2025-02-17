@@ -2,6 +2,11 @@
 
 A lightweight, real-time mining pool and monitoring solution specifically designed for BitaXe miners. This project provides both a stratum server for mining and a comprehensive web interface to monitor your BitaXes' performance, temperatures, and mining statistics.
 
+I am just messing around with setting up my pool, seeing what I can do with it, and trying to hit the lottery simultaneously.
+I'm a redneck with ADHD, and I enjoy nerding out sometimes. I am in no way an expert at this! Use at your own risk, and please make it better!
+
+When I have time, I will assemble a betting file structure and organize everything. 
+
 ## Features
 
 - **Real-time BitaXe Monitoring**
