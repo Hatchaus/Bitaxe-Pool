@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitaXe Mining Pool Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BitaXe Mining Pool Dashboard</h1>
+
+        <!-- Bitcoin Node Status -->
+        <div class="sync-status">
+            <h3>Bitcoin Node Status</h3>
+            <div class="progress-bar">
+                <div id="syncProgress" class="progress-fill" style="width: 0%">0%</div>
+            </div>
+            <p id="blockInfo" style="margin-top: 10px;">Blocks: 0 / Headers: 0</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Hashrate</h3>
+                <p id="totalHashrate">Loading...</p>
+            </div>
+            <div class="stat-card">
+                <h3>Active Miners</h3>
+                <p id="minerCount">Loading...</p>
+            </div>
+            <div class="stat-card">
+                <h3>Valid Shares</h3>
+                <p id="validShares">Loading...</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pool Address</h3>
+                <p id="poolAddress" style="font-size: 0.8em; word-break: break-all;"></p>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="hashrateChart"></canvas>
+        </div>
+
+        <!-- Miner Stats Table -->
+        <h2>Miner Statistics</h2>
+        <table class="miners-table">
+            <thead>
+                <tr>
+                    <th>Worker</th>
+                    <th>Hashrate</th>
+                    <th>Shares</th>
+                    <th>Temperature</th>
+                    <th>Frequency</th>
+                    <th>Fan</th>
+                    <th>Last Share</th>
+                </tr>
+            </thead>
+            <tbody id="minerStats"></tbody>
+        </table>
+
+        <!-- Donation Footer -->
+        <div class="footer">
+            <p>Support Development</p>
+            <p>BTC: bc1qy7qfcz9kt2lj3m72my89wp4j52cc9w79cys9hx</p>
+        </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

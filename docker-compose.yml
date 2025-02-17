@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  bitcoind:
+    image: ruimarinho/bitcoin-core:latest
+    container_name: btc-node
+    volumes:
+      - bitcoin_data:/home/bitcoin/.bitcoin
+    ports:
+      - "8332:8332"
+    command:
+      - -server=1
+      - -rpcuser=${BTC_RPC_USER:-bitcoinrpc}
+      - -rpcpassword=${BTC_RPC_PASS:-changeme}
+      - -rpcallowip=0.0.0.0/0
+      - -rpcbind=0.0.0.0
+      - -txindex=1
+    restart: unless-stopped
+    networks:
+      - pool-network
+
+  pool:
+    build: .
+    container_name: bitaxe-pool
+    depends_on:
+      - bitcoind
+    ports:
+      - "3333:3333"
+      - "6969:6969"
+    volumes:
+      - pool_logs:/usr/src/app/logs
+      - ./config:/usr/src/app/config
+    environment:
+      - NODE_ENV=production
+      - BTC_RPC_USER=${BTC_RPC_USER:-bitcoinrpc}
+      - BTC_RPC_PASS=${BTC_RPC_PASS:-changeme}
+      - BTC_RPC_HOST=bitcoind
+      - BTC_RPC_PORT=8332
+      - POOL_NAME=${POOL_NAME:-BitaXe Pool}
+      - REWARD_ADDRESS=${REWARD_ADDRESS}
+    restart: unless-stopped
+    networks:
+      - pool-network
+
+networks:
+  pool-network:
+    driver: bridge
+
+volumes:
+  bitcoin_data:
+    driver: local
+  pool_logs:
+    driver: local
