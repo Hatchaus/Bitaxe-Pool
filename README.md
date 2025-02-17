@@ -8,6 +8,7 @@ I'm just messing around with setting up my pool, seeing what I can do with it, a
 
 When I have time, I will assemble a better file structure and organize everything.
 
+![screenshot of webpage](https://github.com/user-attachments/assets/588cfcba-37c3-4174-a772-161f0c5e2aae)
 
 
 
