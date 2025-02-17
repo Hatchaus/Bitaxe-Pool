@@ -35,7 +35,7 @@ A lightweight, real-time mining pool and monitoring solution specifically design
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/bitaxe-pool
+git clone https://github.com/Hatchaus/Bitaxe-Pool
 cd bitaxe-pool
 ```
 
